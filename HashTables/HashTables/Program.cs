@@ -10,7 +10,6 @@ namespace HashTables
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Welcome to Hash Table And Binary Search Tree");
             MyMapNode<string, string> hash = new MyMapNode<string, string>(20);
             Console.WriteLine(hash.IsEmpty());
@@ -35,18 +34,8 @@ namespace HashTables
             Console.WriteLine(hash.GetV("5").GetHashCode());
             Console.WriteLine(hash.GetV("0").GetHashCode());
             Console.WriteLine($"size is: {hash.Getsize()}");
-
-            string output = hash.GetV("3");
-            int count = 0;
-            for (int i = 0; i < hash.Getsize(); i++)
-            {
-                string temp = hash.GetV($"{i}");
-                if (output == temp)
-                {
-                    count++;
-                }
-            }
-            Console.WriteLine($"frequency of {output} is : {count}");
+            hash.Remove("16");
+            Console.WriteLine($"size is: {hash.Getsize()}");
             Console.ReadLine();
         }
     }
